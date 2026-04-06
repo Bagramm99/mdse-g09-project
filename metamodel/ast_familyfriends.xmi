@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<racespec:Event
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:racespec="http://www.xtext.org/racespec/RaceSpec"
+    xsi:schemaLocation="http://www.xtext.org/racespec/RaceSpec RaceSpec.ecore#//racespec"
+    name="Harz Mountain Winter 2025"
+    location="Clausthal-Altenau"
+    year="2025">
+  <course totalLength="15.0"
+      firingPositions="10"/>
+</racespec:Event>

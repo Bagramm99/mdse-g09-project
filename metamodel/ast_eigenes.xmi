@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<racespec:Event xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:racespec="http://www.xtext.org/racespec/RaceSpec"
+    name="Wolfenbuettel Sprint Triathlon 2025" location="Wolfenbuettel" year="2025">
+  <course totalLength="25.75" firingPositions="0"/>
+  <competitions name="Sprint Triathlon Open" distance="25.75" maxParticipants="300" teamSize="1">
+    <stages xsi:type="racespec:SkiStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" distance="0.75"/>
+    <stages xsi:type="racespec:SkiStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" distance="20.0"/>
+    <stages xsi:type="racespec:SkiStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" distance="5.0"/>
+    <startCondition xsi:type="racespec:MassWaveStart" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" participantsPerWave="10" waveIntervalSeconds="120"/>
+  </competitions>
+</racespec:Event>

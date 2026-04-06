@@ -15,7 +15,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="firingPositions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="shootingRanges" upperBound="-1"
-          eType="#//racespec/ShootingRange"/>
+          eType="#//racespec/ShootingRange" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ShootingRange">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="rangeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -28,7 +28,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxParticipants" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="teamSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="stages" lowerBound="1"
-          eType="#//racespec/Stage" containment="true"/>
+          upperBound="-1" eType="#//racespec/Stage" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="startCondition" lowerBound="1"
           eType="#//racespec/StartCondition" containment="true"/>
     </eClassifiers>

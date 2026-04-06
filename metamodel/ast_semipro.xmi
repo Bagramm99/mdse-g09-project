@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<racespec:Event xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:racespec="http://www.xtext.org/racespec/RaceSpec"
+    name="Harz Mountain Winter 2025" location="Clausthal-Altenau" year="2025">
+  <course totalLength="15.0" firingPositions="10">
+    <shootingRanges rangeId="1" hasExtraLap="true" extraLapLength="100.0"/>
+    <shootingRanges rangeId="2" hasExtraLap="true" extraLapLength="100.0"/>
+    <shootingRanges rangeId="3" hasExtraLap="true" extraLapLength="100.0"/>
+    <shootingRanges rangeId="4" hasExtraLap="false" extraLapLength="0.0"/>
+  </course>
+  <competitions name="Semi-professional Single" distance="15.0" maxParticipants="200" teamSize="1">
+    <stages xsi:type="racespec:SkiStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" distance="3.75"/>
+    <stages xsi:type="racespec:ShootingStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetCount="5" position="standing">
+      <penalty xsi:type="racespec:ExtraLapPenalty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lapLength="100.0"/>
+    </stages>
+    <stages xsi:type="racespec:SkiStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" distance="3.75"/>
+    <stages xsi:type="racespec:ShootingStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetCount="5" position="laying">
+      <penalty xsi:type="racespec:ExtraLapPenalty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lapLength="100.0"/>
+    </stages>
+    <stages xsi:type="racespec:SkiStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" distance="3.75"/>
+    <stages xsi:type="racespec:ShootingStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetCount="5" position="standing">
+      <penalty xsi:type="racespec:ExtraLapPenalty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lapLength="100.0"/>
+    </stages>
+    <stages xsi:type="racespec:SkiStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" distance="3.75"/>
+    <stages xsi:type="racespec:ShootingStage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetCount="5" position="laying">
+      <penalty xsi:type="racespec:TimePenalty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" secondsPerMiss="30" maxSeconds="0"/>
+    </stages>
+    <startCondition xsi:type="racespec:IntervalStart" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" intervalSeconds="30"/>
+  </competitions>
+</racespec:Event>

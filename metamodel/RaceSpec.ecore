@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="">
+  <eSubpackages name="racespec" nsURI="http://www.xtext.org/racespec/RaceSpec" nsPrefix="racespec">
+    <eClassifiers xsi:type="ecore:EClass" name="Event">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="course" lowerBound="1"
+          eType="#//racespec/Course" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="competitions" lowerBound="1"
+          upperBound="-1" eType="#//racespec/Competition" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Course">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="firingPositions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="shootingRanges" upperBound="-1"
+          eType="#//racespec/ShootingRange"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ShootingRange">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rangeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasExtraLap" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extraLapLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Competition">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxParticipants" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="teamSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stages" lowerBound="1"
+          eType="#//racespec/Stage" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startCondition" lowerBound="1"
+          eType="#//racespec/StartCondition" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Stage" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SkiStage" eSuperTypes="#//racespec/Stage">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ShootingStage" eSuperTypes="#//racespec/Stage">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="penalty" lowerBound="1"
+          eType="#//racespec/Penalty" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Penalty" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TimePenalty" eSuperTypes="#//racespec/Penalty">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="secondsPerMiss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxSeconds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ExtraLapPenalty" eSuperTypes="#//racespec/Penalty">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lapLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StartCondition" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IntervalStart" eSuperTypes="#//racespec/StartCondition">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="intervalSeconds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MassWaveStart" eSuperTypes="#//racespec/StartCondition">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="participantsPerWave"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="waveIntervalSeconds"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

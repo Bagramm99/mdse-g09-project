@@ -1,0 +1,76 @@
+grammar org.xtext.racespec.RaceSpec with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate raceSpec "http://www.xtext.org/racespec/RaceSpec"
+
+Event:
+    'event' name=STRING '{'
+        'location:' location=STRING
+        'year:' year=INT
+        course=Course
+        competitions+=Competition+
+    '}';
+
+Course:
+    'course' '{'
+        'length:' totalLength=DOUBLE 'km'
+        'shootingRanges:' numRanges=INT
+        'firingPositions:' firingPositions=INT
+        ranges+=ShootingRange*
+    '}';
+
+ShootingRange:
+    'shootingRange' rangeId=INT '{'
+        'hasExtraLap:' hasExtraLap=BOOLEAN
+        ('extraLapLength:' extraLapLength=DOUBLE 'm')?
+    '}';
+
+Competition:
+    'competition' name=STRING '{'
+        'type:' type=('individual' | 'relay')
+        ('teamSize:' teamSize=INT)?
+        'distance:' distance=DOUBLE 'km'
+        'maxParticipants:' maxParticipants=INT
+        'start:' startCondition=StartCondition
+        stages+=Stage+
+    '}';
+
+Stage:
+    SkiStage | ShootingStage;
+
+SkiStage:
+    'stage' 'ski' '(' distance=DOUBLE 'km' ')';
+
+ShootingStage:
+    'stage' 'shooting' '(' position=('standing' | 'laying') ')' '{'
+        'penalty:' penalty=Penalty
+    '}';
+
+Penalty:
+    TimePenalty | ExtraLapPenalty;
+
+TimePenalty:
+    'timePenalty' '(' secondsPerMiss=INT 'sec'
+        ('max:' maxSeconds=INT 'sec')?
+    ')';
+
+ExtraLapPenalty:
+    'extraLap' '(' lapLength=DOUBLE 'm' ')';
+
+StartCondition:
+    IntervalStart | MassWaveStart;
+
+IntervalStart:
+    'interval' '(' intervalSeconds=INT 'sec' ')';
+
+MassWaveStart:
+    'massWave' '(' participantsPerWave=INT 'participants'
+        ',' waveIntervalSeconds=INT 'sec'
+    ')';
+
+terminal DOUBLE returns ecore::EDouble:
+    ('0'..'9')+ '.' ('0'..'9')+;
+
+terminal BOOLEAN returns ecore::EBoolean:
+    'true' | 'false';

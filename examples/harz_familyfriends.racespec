@@ -1,0 +1,24 @@
+event "Harz Mountain Winter 2025" {
+    location: "Clausthal-Altenau"
+    year: 2025
+    course {
+        length: 15.0km
+        shootingRanges: 4
+        firingPositions: 10
+    }
+    competition "Family and Friends Relay" {
+        type: relay
+        teamSize: 4
+        distance: 30.0km
+        maxParticipants: 50
+        start: interval(30sec)
+        stage ski(7.5km)
+        stage shooting(standing) {
+            penalty: timePenalty(15sec max: 45sec)
+        }
+        stage ski(7.5km)
+        stage shooting(laying) {
+            penalty: timePenalty(30sec max: 90sec)
+        }
+    }
+}

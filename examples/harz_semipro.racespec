@@ -1,0 +1,32 @@
+event "Harz Mountain Winter 2025" {
+    location: "Clausthal-Altenau"
+    year: 2025
+    course {
+        length: 15.0km
+        shootingRanges: 4
+        firingPositions: 10
+    }
+    competition "Semi-professional Single" {
+        type: individual
+        teamSize: 1
+        distance: 15.0km
+        maxParticipants: 200
+        start: interval(30sec)
+        stage ski(3.75km)
+        stage shooting(standing) {
+            penalty: extraLap(100.0m)
+        }
+        stage ski(3.75km)
+        stage shooting(laying) {
+            penalty: extraLap(100.0m)
+        }
+        stage ski(3.75km)
+        stage shooting(standing) {
+            penalty: extraLap(100.0m)
+        }
+        stage ski(3.75km)
+        stage shooting(laying) {
+            penalty: timePenalty(30sec)
+        }
+    }
+}

@@ -1,0 +1,19 @@
+event "Wolfenbuettel Sprint Triathlon 2025" {
+    location: "Wolfenbuettel"
+    year: 2025
+    course {
+        length: 25.75km
+        shootingRanges: 0
+        firingPositions: 0
+    }
+    competition "Sprint Triathlon Open" {
+        type: individual
+        teamSize: 1
+        distance: 25.75km
+        maxParticipants: 300
+        start: massWave(10 participants, 120sec)
+        stage ski(0.75km)
+        stage ski(20.0km)
+        stage ski(5.0km)
+    }
+}

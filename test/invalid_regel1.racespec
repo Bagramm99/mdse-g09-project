@@ -1,0 +1,13 @@
+event "Test R1" {
+    location: "Testort"
+    year: 2025
+    course { length: 15.0km shootingRanges: 0 firingPositions: 0 }
+    competition "Invalid Individual" {
+        type: individual
+        teamSize: 4
+        distance: 15.0km
+        maxParticipants: 10
+        start: interval(30sec)
+        stage ski(15.0km)
+    }
+}

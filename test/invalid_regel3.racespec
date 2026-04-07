@@ -1,0 +1,15 @@
+event "Test R3" {
+    location: "Testort"
+    year: 2025
+    course { length: 15.0km shootingRanges: 0 firingPositions: 0 }
+    competition "Invalid Distance" {
+        type: individual
+        teamSize: 1
+        distance: 15.0km
+        maxParticipants: 10
+        start: interval(30sec)
+        stage ski(3.0km)
+        stage ski(3.0km)
+        stage ski(3.0km)
+    }
+}

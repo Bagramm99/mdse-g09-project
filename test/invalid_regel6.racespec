@@ -1,0 +1,13 @@
+event "Test R6" {
+    location: "Testort"
+    year: 2025
+    course { length: 15.0km shootingRanges: 0 firingPositions: 0 }
+    competition "Invalid MassWave" {
+        type: individual
+        teamSize: 1
+        distance: 15.0km
+        maxParticipants: 10
+        start: massWave(0 participants, 300sec)
+        stage ski(15.0km)
+    }
+}

@@ -1,0 +1,20 @@
+event "Test R5" {
+    location: "Testort"
+    year: 2025
+    course { length: 15.0km shootingRanges: 2 firingPositions: 10 }
+    competition "Too Many Shootings" {
+        type: individual
+        teamSize: 1
+        distance: 15.0km
+        maxParticipants: 10
+        start: interval(30sec)
+        stage ski(3.0km)
+        stage shooting(standing) { penalty: extraLap(100.0m) }
+        stage ski(3.0km)
+        stage shooting(laying)   { penalty: extraLap(100.0m) }
+        stage ski(3.0km)
+        stage shooting(standing) { penalty: extraLap(100.0m) }
+        stage ski(3.0km)
+        stage shooting(laying)   { penalty: timePenalty(30sec) }
+    }
+}

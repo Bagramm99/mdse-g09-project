@@ -4,7 +4,7 @@
 **Module:** Modellgetriebene Software Entwicklung (MDSE) · SoSe 2026  
 **University:** Ostfalia University of Applied Sciences  
 **Group:** Gruppe9  
-**Authors:** Durio Ngnimpea, Dhia Flifel  
+**Authors:** Durio Ngnimpea (70485232), Dhia Flifel  
 **Submission:** 31.05.2026  
 **Repository:** https://gitlab-fi.ostfalia.de/lv/ami-ss26/gruppe9/racespec
 

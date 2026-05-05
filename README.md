@@ -6,7 +6,7 @@
 **Group:** Gruppe9  
 **Authors:** Durio Ngnimpea (70485232), Dhia Flifel  
 **Submission:** 31.05.2026  
-**Repository:** https://gitlab-fi.ostfalia.de/lv/ami-ss26/gruppe9/racespec
+**Repository:** https://gitlab-fi.ostfalia.de/lv/ami-ss26/g09/racespec
 
 ---
 
@@ -43,7 +43,7 @@ reports can be generated automatically.
 
 1. Clone this repository:
    ```
-   git clone https://gitlab-fi.ostfalia.de/lv/ami-ss26/gruppe9/racespec.git
+   git clone https://gitlab-fi.ostfalia.de/lv/ami-ss26/g09/racespec.git
    ```
 
 2. Open Eclipse → File → Import → General → Existing Projects into Workspace

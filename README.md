@@ -1,10 +1,10 @@
-
+﻿
 # RaceSpec — A DSL for Racing Sport Competitions
 
 **Module:** Modellgetriebene Software Entwicklung (MDSE) · SoSe 2026  
 **University:** Ostfalia University of Applied Sciences  
 **Group:** Gruppe9  
-**Authors:** Durio Ngnimpea (70485232), Dhia Flifel  
+**Authors:** Durio Ngnimpea (70485232), Dhia Flifel (70498002)
 **Submission:** 31.05.2026  
 **Repository:** https://gitlab-fi.ostfalia.de/lv/ami-ss26/gruppe9/racespec
 
@@ -148,3 +148,22 @@ event "Harz Mountain Winter 2025" {
 | invalid_regel5.racespec | /test | yes |
 | invalid_regel6.racespec | /test | yes |
 | README.md | / | yes |
+
+---
+
+## Bonus Feature — HTML Generation
+
+The RaceSpec project includes an automatic HTML generator implemented with Xtend.
+
+When a `.racespec` file is saved in the Runtime Eclipse application, the generator automatically creates a formatted HTML webpage containing:
+
+- Event information
+- Course information
+- Competition overview
+- Stage definitions
+- Penalty configuration
+- Start conditions
+
+The generated HTML files are written into the `src-gen/` folder and can be opened directly in a web browser.
+
+This demonstrates model-to-text transformation using Xtext and Xtend.

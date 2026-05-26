@@ -2,8 +2,8 @@
 
 **Module:** Modellgetriebene Software Entwicklung (MDSE) · SoSe 2026 · Ostfalia University  
 **Group:** Gruppe9  
-**Authors:** Durio Ngnimpea
-**Date:** April 2026
+**Authors:** Durio Ngnimpea and Dhia Filfel
+**Date:** Mai 2026
 
 ---
 

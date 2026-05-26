@@ -1,9 +1,9 @@
 # Domain Analysis — RaceSpec DSL
 
 **Module:** Modellgetriebene Software Entwicklung (MDSE) · SoSe 2026 · Ostfalia University  
-**Group:** GXX  
-**Authors:** (Namen eintragen)  
-**Date:** April 2026
+**Group:** 09  
+**Authors:** Durio Ngnimpea and Dhia Flifel
+**Date:** Mai 2026
 
 ---
 

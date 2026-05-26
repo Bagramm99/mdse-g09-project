@@ -3,7 +3,7 @@
 
 **Module:** Modellgetriebene Software Entwicklung (MDSE) · SoSe 2026 · Ostfalia University  
 **Group:** Gruppe9  
-**Date:** Maiil 2026
+**Date:** Mai 2026
 
 ---
 

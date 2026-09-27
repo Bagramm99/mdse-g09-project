@@ -1,11 +1,9 @@
 
 # RaceSpec — A DSL for Racing Sport Competitions
 
-**Module:** Modellgetriebene Software Entwicklung (MDSE) · SoSe 2026  
-**University:** Ostfalia University of Applied Sciences  
-**Group:** Gruppe9  
-**Authors:** Durio Ngnimpea (70485232), Dhia Flifel  
-**Submission:** 31.05.2026  
+**Module:** Modellgetriebene Software Entwicklung (MDSE) 
+**University:** Ostfalia University of Applied Sciences   
+**Authors:** Durio Ngnimpea
 **Repository:** https://gitlab-fi.ostfalia.de/lv/ami-ss26/g09/racespec
 
 ---
